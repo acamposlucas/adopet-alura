@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+html, body {
+  font-family: ${(props) => props.theme.fontFamily.primary};
+  font-size: ${(props) => props.theme.fontSize["text-base"]};
+}
   /* Box sizing rules */
 *,
 *::before,
