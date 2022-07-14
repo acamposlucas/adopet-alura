@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { Header } from "../Header";
 
@@ -23,6 +24,7 @@ const DefaultLayout = () => {
   return (
     <DefaultContainer>
       <Header />
+      <Outlet />
     </DefaultContainer>
   );
 };
