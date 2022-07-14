@@ -1,5 +1,6 @@
 import Logo from "../../components/Logo";
-import { InnerContainer, HeroContainer, HomeContainer } from "./styles";
+import { BaseButton } from "../../styles/components";
+import { HeroContainer, HomeContainer, InnerContainer } from "./styles";
 
 const Home = () => {
   return (
@@ -16,8 +17,12 @@ const Home = () => {
           gente!
         </p>
         <InnerContainer>
-          <a>Já tenho uma conta</a>
-          <a>Quero me cadastrar</a>
+          <BaseButton as={"a"} maxWidth={180}>
+            Já tenho conta
+          </BaseButton>
+          <BaseButton as={"a"} maxWidth={180}>
+            Quero me cadastrar
+          </BaseButton>
         </InnerContainer>
       </HeroContainer>
     </HomeContainer>

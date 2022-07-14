@@ -1,6 +1,7 @@
 export const defaultTheme = {
   colors: {
     white: "#ffffff",
+    "black-100": "rgba(0, 0, 0, 0.25)",
     "blue-400": "#3772ff",
     "green-400": "#36d6ad",
     "red-400": "#fc7071",
@@ -14,6 +15,7 @@ export const defaultTheme = {
     secondary: "'IBM Plex Sans', sans-serif",
   },
   fontWeight: {
+    semiBold: 600,
     medium: 500,
     regular: 400,
   },
