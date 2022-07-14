@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import { Footer } from "../Footer";
 import { Header } from "../Header";
 
 const DefaultContainer = styled.div`
@@ -11,7 +12,6 @@ const DefaultContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-inline: clamp(3rem, 5vw, 8vw);
 
   @media (min-width: 768px) {
     background-image: url("src/assets/background-lg-top-right.svg"),
@@ -25,6 +25,7 @@ const DefaultLayout = () => {
     <DefaultContainer>
       <Header />
       <Outlet />
+      <Footer />
     </DefaultContainer>
   );
 };

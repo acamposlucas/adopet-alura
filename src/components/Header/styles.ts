@@ -6,14 +6,18 @@ export const HeaderContainer = styled.header`
   gap: 3.5rem;
   justify-content: flex-start;
   padding-block: 3rem;
-
-  .logo {
-    display: none;
-  }
+  padding-inline: clamp(3rem, 5vw, 8vw);
 
   @media (min-width: 768px) {
-    .logo {
-      display: block;
-    }
+    padding-block: 4rem;
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    width: 128px;
   }
 `;
