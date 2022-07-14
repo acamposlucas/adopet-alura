@@ -19,4 +19,5 @@ export const BaseButton = styled.button<ButtonProps>`
   line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
   padding-block: 0.5rem;
   padding-inline: 0.5rem;
+  width: calc(100% - 1rem);
 `;

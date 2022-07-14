@@ -20,12 +20,15 @@ export const defaultTheme = {
     regular: 400,
   },
   fontSize: {
-    "text-2xl": "4.25rem",
-    "text-xl": "2.625rem",
-    "text-lg": "1.625rem",
-    "text-base": "1rem",
-    "text-sm": "0.875rem",
-    "text-xs": "0.75rem",
+    "text-7xl": "4.25rem", // 68px
+    "text-5xl": "2.625rem", // 42px
+    "text-3xl": "1.75rem", // 28px
+    "text-2xl": "1.625rem", // 26px
+    "text-lg": "1.75rem", // 18px
+    "text-md": "1.125rem", // 18px
+    "text-base": "1rem", // 16px
+    "text-sm": "0.875rem", // 14px
+    "text-xs": "0.75rem", // 12px
   },
   lineHeight: {
     "leading-none": 1.05,
