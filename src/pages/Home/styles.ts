@@ -1,14 +1,7 @@
 import styled from "styled-components";
+import { BaseMainContainer } from "../../styles/components";
 
-export const HomeContainer = styled.main`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding-block: clamp(1rem, 3vw, 12vw);
-  margin-inline: auto;
-  min-height: 100vh;
-  width: calc(100vw - var(--marginInline));
-  max-width: 1200px;
+export const HomeContainer = styled(BaseMainContainer)`
   background-image: url("src/assets/pets.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -48,9 +41,4 @@ export const HeroContainer = styled.div`
       font-size: ${(props) => props.theme.fontSize["text-md"]};
     }
   }
-`;
-
-export const LogoWrapper = styled.div`
-  width: minmax(190px, 250px);
-  height: minmax(48px, 64px);
 `;

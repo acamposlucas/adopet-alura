@@ -21,3 +21,14 @@ export const BaseButton = styled.button<ButtonProps>`
   padding-inline: 0.5rem;
   width: calc(100% - 1rem);
 `;
+
+export const BaseMainContainer = styled.main`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-block: clamp(1rem, 3vw, 12vw);
+  margin-inline: auto;
+  min-height: 100vh;
+  width: calc(100vw - var(--marginInline));
+  max-width: 1200px;
+`;

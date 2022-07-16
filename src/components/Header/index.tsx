@@ -2,6 +2,7 @@ import { HeaderContainer, LogoWrapper } from "./styles";
 import HomeIcon from "../../assets/icons/house.svg";
 import MailIcon from "../../assets/icons/mail.svg";
 import Logo from "../Logo";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -9,9 +10,9 @@ export const Header = () => {
       <LogoWrapper>
         <Logo />
       </LogoWrapper>
-      <a href="#" title="Homepage">
+      <Link to="/" title="Homepage">
         <img src={HomeIcon} alt="" />
-      </a>
+      </Link>
       <a href="#" title="Mail us">
         <img src={MailIcon} alt="" />
       </a>

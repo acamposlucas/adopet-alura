@@ -4,11 +4,11 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 
 const DefaultContainer = styled.div`
+  background-color: ${(props) => props.theme.colors["blue-400"]};
   background-image: url("src/assets/background-top-left.svg"),
     url("src/assets/background-right-side.svg");
   background-position: top left, right 50vw;
   background-repeat: no-repeat;
-  background-color: ${(props) => props.theme.colors["blue-400"]};
   display: flex;
   flex-direction: column;
   min-height: 100vh;
