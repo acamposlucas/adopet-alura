@@ -10,7 +10,7 @@ export const defaultTheme = {
     "gray-400": "#d8d8d8",
     "gray-300": "#ededed",
     "gray-200": "#bcbcbc",
-    "gray-100": "f7f7f7",
+    "gray-100": "#f7f7f7",
   },
   fontFamily: {
     primary: "'Poppins', sans-serif",

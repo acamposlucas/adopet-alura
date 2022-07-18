@@ -8,6 +8,7 @@ const DefaultContainer = styled.div`
     url("src/assets/background-right-side.svg");
   background-position: top left, right 50vw;
   background-repeat: no-repeat;
+  background-size: auto, auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

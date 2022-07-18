@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface ButtonProps {
-  maxWidth: number;
-}
-
-export const BaseButton = styled.button<ButtonProps>`
+export const BaseButton = styled.button`
   align-items: center;
   background-color: ${(props) => props.theme.colors["red-400"]};
   border: 0;
