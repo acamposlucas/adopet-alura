@@ -20,11 +20,11 @@ const Home = () => {
           Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
           gente!
         </p>
-        <BaseButton as={"div"} maxWidth={180}>
-          <NavLink to={"/cadastro"}>Já tenho conta</NavLink>
+        <BaseButton as={"div"}>
+          <NavLink to={"/login"}>Já tenho conta</NavLink>
         </BaseButton>
-        <BaseButton as={"a"} maxWidth={180}>
-          Quero me cadastrar
+        <BaseButton as={"a"}>
+          <NavLink to={"/cadastro"}>Quero me cadastrar</NavLink>
         </BaseButton>
       </HeroContainer>
     </HomeContainer>
