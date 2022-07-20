@@ -11,6 +11,7 @@ export const defaultTheme = {
     "gray-300": "#ededed",
     "gray-200": "#bcbcbc",
     "gray-100": "#f7f7f7",
+    "gray-50": "#F6F6F6",
   },
   fontFamily: {
     primary: "'Poppins', sans-serif",
@@ -31,6 +32,7 @@ export const defaultTheme = {
     "text-base": "1rem", // 16px
     "text-sm": "0.875rem", // 14px
     "text-xs": "0.75rem", // 12px
+    "text-xxs": "0.625rem", // 10px
   },
   lineHeight: {
     "leading-none": 1.05,
