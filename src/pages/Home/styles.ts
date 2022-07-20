@@ -26,6 +26,7 @@ export const HomeContainer = styled.main`
       width: calc(100% - 40vw);
       margin-inline: auto;
       line-height: ${(props) => props.theme.lineHeight["leading-snug"]};
+      margin-block-end: 2rem;
     }
   }
 `;
@@ -33,4 +34,14 @@ export const HomeContainer = styled.main`
 export const PetList = styled.div`
   display: grid;
   grid-template-columns: repeat(1, minmax(0, auto));
+  gap: 1rem;
+  margin-inline: auto;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, auto));
+    place-items: center;
+  }
+  @media (min-width: 90rem) {
+    grid-template-columns: repeat(3, minmax(0, auto));
+  }
 `;

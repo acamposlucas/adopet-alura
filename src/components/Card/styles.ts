@@ -5,12 +5,14 @@ export const CardContainer = styled.div`
   max-height: 12.5rem;
   padding-block: 1rem;
   padding-inline: 1.5rem;
+  box-shadow: 3px 2px 5px ${(props) => props.theme.colors["black-100"]};
 `;
 
 export const CardInnerContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: center;
 `;
 
 export const PetDetails = styled.div`
@@ -27,14 +29,14 @@ export const PetDetails = styled.div`
     }
 
     p {
-      color: ${(props) => props.theme.colors["gray-500"]};
-      font-size: ${(props) => props.theme.fontSize["text-xs"]};
+      color: ${(props) => props.theme.colors["black-800"]};
+      font-size: ${(props) => props.theme.fontSize["text-sm"]};
       line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
     }
   }
 
   & > .local {
-    color: ${(props) => props.theme.colors["gray-500"]};
+    color: ${(props) => props.theme.colors["black-800"]};
 
     p {
       line-height: ${(props) => props.theme.lineHeight["leading-relaxed"]};
@@ -46,8 +48,12 @@ export const PetDetails = styled.div`
       font-size: ${(props) => props.theme.fontSize["text-xxs"]};
       display: flex;
       gap: 0.5rem;
-      color: ${(props) => props.theme.colors["gray-500"]};
+      color: ${(props) => props.theme.colors["black-800"]};
       text-decoration: none;
+
+      &:visited {
+        color: ${(props) => props.theme.colors["black-800"]};
+      }
 
       &:before {
         content: "";

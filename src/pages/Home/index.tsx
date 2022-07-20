@@ -13,7 +13,7 @@ const PETS = [
       city: "Rio de Janeiro",
       state: "RJ",
     },
-    image: `/assets/pets/dunga.png`,
+    image: `./src/assets/pets/dunga.png`,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const PETS = [
       city: "Nova Iguaçu",
       state: "RJ",
     },
-    image: `/assets/pets/felicia.png`,
+    image: `./src/assets/pets/felicia.png`,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const PETS = [
       city: "Duque de Caxias",
       state: "RJ",
     },
-    image: `/assets/pets/sirius.png`,
+    image: `./src/assets/pets/sirius.png`,
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const PETS = [
       city: "São Gonçalo",
       state: "RJ",
     },
-    image: `/assets/pets/fiona.png`,
+    image: `./src/assets/pets/fiona.png`,
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const PETS = [
       city: "Rio de Janeiro",
       state: "RJ",
     },
-    image: `/assets/pets/sid.png`,
+    image: `./src/assets/pets/sid.png`,
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const PETS = [
       city: "Nova Iguaçu",
       state: "RJ",
     },
-    image: `/assets/pets/yoda.png`,
+    image: `./src/assets/pets/yoda.png`,
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ const PETS = [
       city: "Duque de Caxias",
       state: "RJ",
     },
-    image: `/assets/pets/lua.png`,
+    image: `./src/assets/pets/lua.png`,
   },
   {
     id: 8,
@@ -97,7 +97,7 @@ const PETS = [
       city: "São Gonçalo",
       state: "RJ",
     },
-    image: `/assets/pets/amora.png`,
+    image: `./src/assets/pets/amora.png`,
   },
   {
     id: 9,
@@ -109,13 +109,13 @@ const PETS = [
       city: "Rio de Janeiro",
       state: "RJ",
     },
-    image: `/assets/pets/zelda.png`,
+    image: `./src/assets/pets/zelda.png`,
   },
 ];
 
 export const Home = () => {
   return (
-    <>
+    <div>
       <AvatarContainer>
         <strong>LA</strong>
       </AvatarContainer>
@@ -124,11 +124,19 @@ export const Home = () => {
           <h2>Olá! Veja os amigos disponíveis para adoção!</h2>
           <PetList>
             {PETS.map((pet) => (
-              <Card />
+              <Card
+                key={pet.id}
+                name={pet.name}
+                age={pet.age}
+                size={pet.size}
+                description={pet.description}
+                local={pet.local}
+                image={pet.image}
+              />
             ))}
           </PetList>
         </section>
       </HomeContainer>
-    </>
+    </div>
   );
 };
