@@ -18,9 +18,17 @@ export const FormContainer = styled.form`
 
 export const Fieldset = styled.fieldset`
   border: 0;
+  display: contents;
 `;
 
-export const Legend = styled.legend``;
+export const Legend = styled.legend`
+  display: block;
+  text-align: center;
+  color: ${(props) => props.theme.colors["gray-500"]};
+  font-size: ${(props) => props.theme.fontSize["text-xl"]};
+  font-weight: ${(props) => props.theme.fontWeight.semiBold};
+  line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
+`;
 
 export const Label = styled.label`
   display: block;
@@ -34,6 +42,15 @@ export const Label = styled.label`
     font-size: ${(props) => props.theme.fontSize["text-sm"]};
     font-weight: ${(props) => props.theme.fontWeight.regular};
   }
+
+  & > span {
+    color: ${(props) => props.theme.colors["red-400"]};
+    display: block;
+    font-weight: ${(props) => props.theme.fontWeight.regular};
+    font-size: ${(props) => props.theme.fontSize["text-xs"]};
+    text-align: center;
+    margin-block: 0.5rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -46,6 +63,10 @@ export const Input = styled.input`
   padding-block: 0.875rem;
   padding-inline: 0.5rem;
   width: 100%;
+
+  &[type="file"] {
+    display: none;
+  }
 `;
 
 export const Textarea = styled.textarea`
@@ -63,4 +84,13 @@ export const FormButton = styled(BaseButton)`
   margin-inline: auto;
   padding-inline: 3rem;
   width: fit-content;
+`;
+
+export const ProfileAvatar = styled.img`
+  aspect-ratio: 1;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  margin-inline: auto;
+  width: 80px;
 `;

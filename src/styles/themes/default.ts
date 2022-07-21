@@ -28,6 +28,7 @@ export const defaultTheme = {
     "text-5xl": "2.625rem", // 42px
     "text-3xl": "1.75rem", // 28px
     "text-2xl": "1.625rem", // 26px
+    "text-xl": "1.5rem", // 24px
     "text-lg": "1.75rem", // 18px
     "text-md": "1.125rem", // 18px
     "text-base": "1rem", // 16px
