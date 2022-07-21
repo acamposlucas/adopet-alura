@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const SecondLayerBackground = styled.div`
+  display: flex;
+  flex-direction: column;
   background-image: url("src/assets/background-right-side.svg");
   background-position: right center;
   background-repeat: no-repeat;

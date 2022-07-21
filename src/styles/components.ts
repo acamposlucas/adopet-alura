@@ -15,13 +15,14 @@ export const BaseButton = styled.button`
   line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
   padding-block: 0.5rem;
   padding-inline: 0.5rem;
-  width: calc(100% - 1rem);
+  width: 9.25rem;
 `;
 
 export const BaseMainContainer = styled.main`
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding-block: clamp(1rem, 3vw, 12vw);
   margin-inline: auto;
   min-height: 100vh;

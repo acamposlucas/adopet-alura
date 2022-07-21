@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { BaseButton } from "../components";
+
+const MX_4 = `1rem`;
 
 export const FormContainer = styled.form`
   background-color: ${(props) => props.theme.colors["gray-50"]};
@@ -6,9 +9,11 @@ export const FormContainer = styled.form`
   display: grid;
   margin-block: 1rem;
   padding-block: 2rem;
-  padding-inline: 1rem;
+  padding-inline: ${MX_4};
   gap: 1rem;
   width: 100%;
+  max-width: 37.5rem;
+  margin-inline: auto;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -52,4 +57,10 @@ export const Textarea = styled.textarea`
   padding-inline: 1rem;
   width: 100%;
   resize: none;
+`;
+
+export const FormButton = styled(BaseButton)`
+  margin-inline: auto;
+  padding-inline: 3rem;
+  width: fit-content;
 `;

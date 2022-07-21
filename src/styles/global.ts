@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --marginInline: clamp(2rem, 6rem, 15rem);
   }
+
 html, body {
   font-family: ${(props) => props.theme.fontFamily.primary};
   font-size: ${(props) => props.theme.fontSize["text-base"]};
@@ -71,5 +72,4 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-
 `;

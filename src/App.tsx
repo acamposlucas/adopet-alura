@@ -31,8 +31,8 @@ function App() {
             <Route path="/" element={<Index />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/mensagem" element={<Mensagem />} />
           </Route>
-          <Route path="/mensagem" element={<Mensagem />} />
           <Route path="/home" element={<Home />} />
         </Route>
       </Routes>
