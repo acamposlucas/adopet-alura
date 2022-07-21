@@ -1,9 +1,7 @@
 import Logo from "../../components/Logo";
-import { BaseButton } from "../../styles/components";
-import { HeroContainer, HomeContainer } from "./styles";
+import { HeroContainer, HomeContainer, IndexButton } from "./styles";
 import { NavLink } from "react-router-dom";
 import { LogoWrapper } from "../../styles/helpers";
-import { colors } from "../../styles/constants";
 
 export const Index = () => {
   return (
@@ -20,12 +18,14 @@ export const Index = () => {
           Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
           gente!
         </p>
-        <BaseButton as={"div"}>
-          <NavLink to={"/login"}>Já tenho conta</NavLink>
-        </BaseButton>
-        <BaseButton as={"a"}>
-          <NavLink to={"/cadastro"}>Quero me cadastrar</NavLink>
-        </BaseButton>
+        <NavLink to={"/login"}>
+          <IndexButton width="180px" as="span">
+            Já tenho conta
+          </IndexButton>
+        </NavLink>
+        <NavLink to={"/cadastro"}>
+          <IndexButton as="span">Quero me cadastrar</IndexButton>
+        </NavLink>
       </HeroContainer>
     </HomeContainer>
   );

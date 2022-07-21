@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BaseMainContainer } from "../../styles/components";
+import { Button } from "../../styles/components/Button";
 
 export const HomeContainer = styled(BaseMainContainer)`
   background-image: url("src/assets/pets.svg");
@@ -40,5 +41,14 @@ export const HeroContainer = styled.div`
     @media (min-width: 768px) {
       font-size: ${(props) => props.theme.fontSize["text-md"]};
     }
+  }
+`;
+
+export const IndexButton = styled(Button)`
+  width: 11.25rem;
+  padding-inline: 0;
+
+  @media (min-width: 48rem) {
+    width: 21.5rem;
   }
 `;

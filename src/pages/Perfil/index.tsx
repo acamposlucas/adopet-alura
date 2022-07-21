@@ -1,7 +1,7 @@
 import React from "react";
+import { Button } from "../../styles/components/Button";
 import {
   Fieldset,
-  FormButton,
   FormContainer,
   Input,
   Label,
@@ -45,7 +45,7 @@ export const Profile = () => {
             <Textarea />
           </Label>
         </Fieldset>
-        <FormButton type="submit">Salvar</FormButton>
+        <Button type="submit">Salvar</Button>
       </FormContainer>
     </ProfileContainer>
   );

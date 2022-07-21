@@ -10,12 +10,12 @@ export const Header = () => {
       <LogoWrapper>
         <Logo />
       </LogoWrapper>
-      <Link to="/" title="Homepage">
+      <Link to="/" title="Página inicial">
         <img src={HomeIcon} alt="" />
       </Link>
-      <a href="#" title="Mail us">
+      <Link to="/mensagem" title="Fale conosco">
         <img src={MailIcon} alt="" />
-      </a>
+      </Link>
     </HeaderContainer>
   );
 };

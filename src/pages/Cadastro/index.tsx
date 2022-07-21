@@ -9,6 +9,7 @@ import {
   InputContainer,
   SubscribeButton,
 } from "./styles";
+import { Button } from "../../styles/components/Button";
 
 export const Cadastro = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -74,7 +75,7 @@ export const Cadastro = () => {
             )}
           </span>
         </InputContainer>
-        <SubscribeButton type="submit">Cadastrar</SubscribeButton>
+        <Button type="submit">Cadastrar</Button>
       </FormContainer>
     </CadastroContainer>
   );

@@ -1,3 +1,4 @@
+import { Button } from "../../styles/components/Button";
 import {
   FormButton,
   FormContainer,
@@ -49,7 +50,7 @@ export const Mensagem = () => {
               rows={8}
             />
           </Label>
-          <FormButton type="submit">Enviar</FormButton>
+          <Button type="submit">Enviar</Button>
         </FormContainer>
       </MensagemInnerContainer>
     </MensagemContainer>

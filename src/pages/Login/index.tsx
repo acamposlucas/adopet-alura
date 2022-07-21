@@ -3,7 +3,8 @@ import { Eye, EyeSlash } from "phosphor-react";
 import Logo from "../../components/Logo";
 import { colors } from "../../styles/constants";
 import { LogoWrapper } from "../../styles/helpers";
-import { LoginContainer, FormContainer, LoginButton } from "./styles";
+import { LoginContainer, FormContainer } from "./styles";
+import { Button } from "../../styles/components/Button";
 
 export const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -42,7 +43,7 @@ export const Login = () => {
           </label>
         </fieldset>
         <a href="#">Esqueci minha senha</a>
-        <LoginButton>Entrar</LoginButton>
+        <Button>Entrar</Button>
       </FormContainer>
     </LoginContainer>
   );

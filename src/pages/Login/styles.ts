@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BaseButton, BaseMainContainer } from "../../styles/components";
+import { Button } from "../../styles/components/Button";
 
 export const LoginContainer = styled(BaseMainContainer)`
   padding-block-start: 2rem;
@@ -87,11 +88,4 @@ export const FormContainer = styled.form`
     text-align: center;
     text-decoration: none;
   }
-`;
-
-export const LoginButton = styled(BaseButton)`
-  margin-block-start: 1.5rem;
-  margin-inline: auto;
-  width: calc(100% - 8rem);
-  max-width: 11.25rem;
 `;
