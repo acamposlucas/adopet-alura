@@ -3,14 +3,14 @@ import { Eye, EyeSlash } from "phosphor-react";
 import Logo from "../../components/Logo";
 import { colors } from "../../styles/constants";
 import { LogoWrapper } from "../../styles/helpers";
-import { LoginContainer, FormContainer } from "./styles";
+import { LoginContainer } from "./styles";
 import { Button } from "../../styles/components/Button";
 import {
   FormLink,
   SecondaryFormContainer,
   SecondaryInput,
   SecondaryLabel,
-} from "../../styles/components/SignInSignUpForm";
+} from "../../styles/components/SecondaryForm";
 
 export const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);

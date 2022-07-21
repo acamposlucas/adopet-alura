@@ -32,6 +32,7 @@ export const SecondaryInput = styled.input`
   border: 0;
   box-shadow: 0px 2px 2px ${(props) => props.theme.colors["black-100"]};
   border-radius: 6px;
+  color: ${(props) => props.theme.colors["gray-200"]};
   font-size: ${(props) => props.theme.fontSize["text-sm"]};
   line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
   margin-block-start: 0.5rem;

@@ -10,13 +10,26 @@ import {
   SubscribeButton,
 } from "./styles";
 import { Button } from "../../styles/components/Button";
+import {
+  SecondaryFormContainer,
+  SecondaryInput,
+  SecondaryLabel,
+} from "../../styles/components/SecondaryForm";
 
 export const Cadastro = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const [isPasswordConfirmationVisible, setIsPasswordConfirmationVisible] =
+    useState<boolean>(false);
 
-  function handleTogglePasswordVisibility() {
-    setIsPasswordVisible(!isPasswordVisible);
-  }
+  const handleTogglePasswordVisibility = (inputID: string) => {
+    return (event: React.MouseEvent) => {
+      inputID === "password"
+        ? setIsPasswordVisible(!isPasswordVisible)
+        : setIsPasswordConfirmationVisible(!isPasswordConfirmationVisible);
+      event.preventDefault();
+    };
+  };
+
   return (
     <CadastroContainer>
       <LogoWrapper>
@@ -28,28 +41,24 @@ export const Cadastro = () => {
           Então, antes de buscar seu melhor amigo, precisamos de alguns dados:
         </p>
       </section>
-      <FormContainer>
-        <InputContainer>
-          <label>Email</label>
-          <input
-            data-type="password"
-            type={"email"}
-            placeholder="Escolha seu melhor email"
-          />
-        </InputContainer>
-        <InputContainer>
-          <label>Nome</label>
-          <input type={"text"} placeholder="Digite seu nome completo" />
-        </InputContainer>
-        <InputContainer>
-          <label>Senha</label>
-          <input
-            data-type="password"
+      <SecondaryFormContainer>
+        <SecondaryLabel htmlFor="email">
+          Email
+          <SecondaryInput id="email" placeholder="Escolha seu melhor email" />
+        </SecondaryLabel>
+        <SecondaryLabel htmlFor="name">
+          Nome
+          <SecondaryInput id="name" placeholder="Digite seu nome completo" />
+        </SecondaryLabel>
+        <SecondaryLabel htmlFor="password">
+          Senha
+          <SecondaryInput
             type={isPasswordVisible ? "text" : "password"}
+            id="password"
             placeholder="Crie uma senha"
           />
           <span
-            onClick={handleTogglePasswordVisibility}
+            onClick={handleTogglePasswordVisibility("password")}
             role="button"
             aria-label="toggle password visibility"
           >
@@ -59,24 +68,29 @@ export const Cadastro = () => {
               <Eye size={16} color="#999" />
             )}
           </span>
-        </InputContainer>
-        <InputContainer>
-          <label>Confirme sua senha</label>
-          <input type={"password"} placeholder="Confirme sua senha" />
+        </SecondaryLabel>
+        <SecondaryLabel htmlFor="passwordConfirmation">
+          Confirme sua senha
+          <SecondaryInput
+            type={isPasswordConfirmationVisible ? "text" : "password"}
+            id="passwordConfirmation"
+            placeholder="Confirme sua senha"
+          />
           <span
-            onClick={handleTogglePasswordVisibility}
+            onClick={handleTogglePasswordVisibility("passwordConfirmation")}
             role="button"
             aria-label="toggle password visibility"
           >
-            {isPasswordVisible ? (
+            {isPasswordConfirmationVisible ? (
               <EyeSlash size={16} color="#999" />
             ) : (
               <Eye size={16} color="#999" />
             )}
           </span>
-        </InputContainer>
+        </SecondaryLabel>
+
         <Button type="submit">Cadastrar</Button>
-      </FormContainer>
+      </SecondaryFormContainer>
     </CadastroContainer>
   );
 };
