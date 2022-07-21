@@ -5,6 +5,12 @@ import { colors } from "../../styles/constants";
 import { LogoWrapper } from "../../styles/helpers";
 import { LoginContainer, FormContainer } from "./styles";
 import { Button } from "../../styles/components/Button";
+import {
+  FormLink,
+  SecondaryFormContainer,
+  SecondaryInput,
+  SecondaryLabel,
+} from "../../styles/components/SignInSignUpForm";
 
 export const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -19,32 +25,28 @@ export const Login = () => {
         <Logo color={colors.secondary} />
       </LogoWrapper>
       <h1>Já tem uma conta? Faça o seu login:</h1>
-      <FormContainer>
-        <fieldset className="fieldset">
-          <legend>Login</legend>
-          <label htmlFor="email">
-            Email
-            <input id="email" placeholder="Insira seu email" />
-          </label>
-          <label htmlFor="password">
-            Senha
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              id="password"
-              placeholder="Insira sua senha"
-            />
-            <button type="button" onClick={handleTogglePasswordVisibility}>
-              {isPasswordVisible ? (
-                <Eye size={16} color="#999" />
-              ) : (
-                <EyeSlash size={16} color="#999" />
-              )}
-            </button>
-          </label>
-        </fieldset>
-        <a href="#">Esqueci minha senha</a>
+      <SecondaryFormContainer>
+        <SecondaryLabel>
+          Email
+          <SecondaryInput type="text" placeholder="Insira seu email" />
+        </SecondaryLabel>
+        <SecondaryLabel>
+          Senha
+          <SecondaryInput
+            type={isPasswordVisible ? "text" : "password"}
+            placeholder="Insira sua senha"
+          />
+          <span role="button" onClick={handleTogglePasswordVisibility}>
+            {isPasswordVisible ? (
+              <Eye size={16} color="#999" />
+            ) : (
+              <EyeSlash size={16} color="#999" />
+            )}
+          </span>
+        </SecondaryLabel>
+        <FormLink href="#">Esqueci minha senha</FormLink>
         <Button>Entrar</Button>
-      </FormContainer>
+      </SecondaryFormContainer>
     </LoginContainer>
   );
 };
