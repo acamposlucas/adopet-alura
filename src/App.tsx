@@ -9,6 +9,7 @@ import { Home } from "./pages/Home";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
 import { SecondLayerLayout } from "./components/Layouts/SecondLayerLayout";
+import { Mensagem } from "./pages/Mensagem";
 
 function App() {
   const [backgroundColor, setbackgroundColor] = useState<string>("#3772FF");
@@ -31,6 +32,7 @@ function App() {
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
           </Route>
+          <Route path="/mensagem" element={<Mensagem />} />
           <Route path="/home" element={<Home />} />
         </Route>
       </Routes>

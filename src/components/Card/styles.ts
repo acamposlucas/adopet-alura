@@ -4,21 +4,27 @@ export const CardContainer = styled.div`
   background-color: ${(props) => props.theme.colors["gray-50"]};
   max-height: 12.5rem;
   padding-block: 1rem;
-  padding-inline: 1.5rem;
+  padding-inline: 1rem;
   box-shadow: 3px 2px 5px ${(props) => props.theme.colors["black-100"]};
+
+  @media (min-width: 400px) {
+    margin-inline: auto;
+    width: calc(100% - 2rem);
+    max-width: 22.5rem;
+  }
 `;
 
 export const CardInnerContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
 `;
 
 export const PetDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 
   & > .description {
     h3 {
