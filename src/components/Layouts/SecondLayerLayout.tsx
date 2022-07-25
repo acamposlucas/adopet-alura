@@ -7,8 +7,13 @@ const SecondLayerBackground = styled.div`
   flex-direction: column;
   flex: 1;
   background-image: url("src/assets/background-right-side.svg");
-  background-position: right center;
+  background-position: right top;
   background-repeat: no-repeat;
+
+  @media (min-width: 48rem) {
+    background-image: url("src/assets/background-lg-right-side.svg");
+    background-position: right top;
+  }
 `;
 
 export const SecondLayerLayout = () => {

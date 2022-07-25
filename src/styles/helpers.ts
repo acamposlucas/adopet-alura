@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const LogoWrapper = styled.div`
-  width: minmax(190px, 250px);
+  min-width: 190px;
+  width: 100%;
+  max-width: 260px;
   height: minmax(48px, 64px);
 `;
 

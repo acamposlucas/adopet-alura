@@ -23,9 +23,7 @@ export const BaseMainContainer = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-block: clamp(1rem, 3vw, 12vw);
   margin-inline: auto;
   min-height: 100vh;
-  width: calc(100vw - var(--marginInline));
   max-width: 1200px;
 `;

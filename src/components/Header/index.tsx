@@ -1,11 +1,10 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { HeaderContainer, LogoWrapper } from "./styles";
 import HomeIcon from "../../assets/icons/house.svg";
 import MailIcon from "../../assets/icons/mail.svg";
 import Logo from "../Logo";
-import { Link, useLocation } from "react-router-dom";
-import { AvatarContainer } from "../Avatar/styles";
 import { Avatar } from "../Avatar";
-import { useEffect, useState } from "react";
 
 interface User {
   name: string;

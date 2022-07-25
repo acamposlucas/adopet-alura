@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import { BaseMainContainer } from "../../styles/components";
-import { Button } from "../../styles/components/Button";
 
 export const HomeContainer = styled(BaseMainContainer)`
   background-image: url("src/assets/pets.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: auto;
+  min-height: 110vh;
 
   @media (min-width: 768px) {
     background-image: url("src/assets/pets-lg.svg");
     background-position: center bottom -1rem;
+    min-height: 85vh;
   }
 `;
 
@@ -23,8 +24,13 @@ export const HeroContainer = styled.div`
   width: calc(80vw - 2rem);
   padding-inline: 2rem;
   max-width: 30rem;
+  padding-block-start: min(10vh, 12rem);
 
-  strong {
+  @media (min-width: 1440px) {
+    padding-block-start: 0;
+  }
+
+  p {
     font-family: ${(props) => props.theme.fontFamily.secondary};
     font-size: ${(props) => props.theme.fontSize["text-2xl"]};
     line-height: ${(props) => props.theme.lineHeight["leading-loose"]};
@@ -34,21 +40,12 @@ export const HeroContainer = styled.div`
     }
   }
 
-  p {
+  h1 {
     line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
     text-align: center;
 
     @media (min-width: 768px) {
       font-size: ${(props) => props.theme.fontSize["text-md"]};
     }
-  }
-`;
-
-export const IndexButton = styled(Button)`
-  width: 11.25rem;
-  padding-inline: 0;
-
-  @media (min-width: 48rem) {
-    width: 21.5rem;
   }
 `;
