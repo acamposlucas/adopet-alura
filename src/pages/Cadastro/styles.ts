@@ -2,18 +2,27 @@ import styled from "styled-components";
 import { BaseButton, BaseMainContainer } from "../../styles/components";
 
 export const CadastroContainer = styled(BaseMainContainer)`
-  padding-block-start: 2rem;
+  padding-block-start: clamp(4rem, 15vh, 15rem);
   width: 90%;
   max-width: 1200px;
+  min-height: 90vh;
 
-  & > * {
-    width: 90%;
-    max-width: 500px;
+  svg.logo {
+    width: 142px;
+    height: 34px;
+    margin-block-end: 1.5rem;
+
+    @media (min-width: 48rem) {
+      width: 250px;
+      height: 64px;
+    }
   }
 
   section {
     color: ${(props) => props.theme.colors["blue-400"]};
     text-align: center;
+    width: 90%;
+    max-width: 500px;
 
     h2 {
       margin-bottom: 0.5rem;
@@ -33,6 +42,11 @@ export const CadastroContainer = styled(BaseMainContainer)`
     height: 200px;
     position: absolute;
     z-index: 1;
+
+    @media (min-width: 1440px) {
+      width: 360px;
+      height: 320px;
+    }
   }
 `;
 
