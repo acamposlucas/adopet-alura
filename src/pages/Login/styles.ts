@@ -3,13 +3,28 @@ import { BaseButton, BaseMainContainer } from "../../styles/components";
 import { Button } from "../../styles/components/Button";
 
 export const LoginContainer = styled(BaseMainContainer)`
-  padding-block-start: 2rem;
+  padding-block-start: 3rem;
   width: 90%;
   max-width: 1200px;
+  min-height: 90vh;
 
-  & > * {
-    width: 90%;
-    max-width: 500px;
+  @media (min-width: 48rem) {
+    padding-block-start: 7rem;
+  }
+
+  @media (min-width: 64rem) {
+    padding-block-start: 0;
+  }
+
+  svg.logo {
+    width: 142px;
+    height: 34px;
+    margin-block-end: 1.5rem;
+
+    @media (min-width: 48rem) {
+      width: 250px;
+      height: 64px;
+    }
   }
 
   h1 {

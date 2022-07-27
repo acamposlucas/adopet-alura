@@ -12,9 +12,11 @@ export const SecondaryFormContainer = styled.form`
 `;
 
 export const SecondaryLabel = styled.label`
-  display: block;
+  align-items: center;
+  display: flex;
   color: ${(props) => props.theme.colors["gray-500"]};
-  font-weight: ${(props) => props.theme.fontWeight.regular};
+  font-weight: ${(props) => props.theme.fontWeight.semiBold};
+  flex-direction: column;
   line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
   position: relative;
   text-align: center;
@@ -24,6 +26,10 @@ export const SecondaryLabel = styled.label`
     position: absolute;
     right: 1rem;
     bottom: 0.3rem;
+
+    @media (min-width: 1440px) {
+      right: 7rem;
+    }
   }
 `;
 
@@ -34,11 +40,22 @@ export const SecondaryInput = styled.input`
   border-radius: 6px;
   color: ${(props) => props.theme.colors["gray-200"]};
   font-size: ${(props) => props.theme.fontSize["text-sm"]};
+  font-weight: ${(props) => props.theme.fontWeight.regular};
   line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
   margin-block-start: 0.5rem;
   padding-block: 0.5rem;
   text-align: center;
   width: 100%;
+
+  &::placeholder {
+    font-weight: ${(props) => props.theme.fontWeight.regular};
+  }
+
+  @media (min-width: 1440px) {
+    &[id="password"] {
+      width: 65%;
+    }
+  }
 `;
 
 export const FormLink = styled.a`

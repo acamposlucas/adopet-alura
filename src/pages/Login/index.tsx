@@ -26,13 +26,18 @@ export const Login = () => {
       </LogoWrapper>
       <h1>Já tem uma conta? Faça o seu login:</h1>
       <SecondaryFormContainer>
-        <SecondaryLabel>
+        <SecondaryLabel htmlFor="email">
           Email
-          <SecondaryInput type="text" placeholder="Insira seu email" />
+          <SecondaryInput
+            id="email"
+            type="text"
+            placeholder="Insira seu email"
+          />
         </SecondaryLabel>
-        <SecondaryLabel>
+        <SecondaryLabel htmlFor="password">
           Senha
           <SecondaryInput
+            id="password"
             type={isPasswordVisible ? "text" : "password"}
             placeholder="Insira sua senha"
           />
