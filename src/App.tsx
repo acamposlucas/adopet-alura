@@ -11,6 +11,7 @@ import { defaultTheme } from "./styles/themes/default";
 import { SecondLayerLayout } from "./components/Layouts/SecondLayerLayout";
 import { Mensagem } from "./pages/Mensagem";
 import { Profile } from "./pages/Perfil";
+import { Admin } from "./pages/Admin";
 
 function App() {
   const [backgroundColor, setbackgroundColor] = useState<string>("#3772FF");
@@ -36,6 +37,7 @@ function App() {
             <Route path="/perfil" element={<Profile />} />
           </Route>
           <Route path="/home" element={<Home />} />
+          <Route path="/admin" element={<Admin />} />
         </Route>
       </Routes>
       <GlobalStyle />

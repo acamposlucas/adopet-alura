@@ -9,6 +9,37 @@ export const SecondaryFormContainer = styled.form`
   width: 100%;
   max-width: 37.5rem;
   margin-inline: auto;
+
+  select {
+    background-color: ${(props) => props.theme.colors["gray-100"]};
+    border: 0;
+    box-shadow: 0px 2px 2px ${(props) => props.theme.colors["black-100"]};
+    border-radius: 6px;
+    color: ${(props) => props.theme.colors["gray-200"]};
+    font-size: ${(props) => props.theme.fontSize["text-sm"]};
+    font-weight: ${(props) => props.theme.fontWeight.regular};
+    line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
+    margin-block-start: 0.5rem;
+    padding-block: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  textarea {
+    background-color: ${(props) => props.theme.colors["gray-100"]};
+    border: 0;
+    box-shadow: 0px 2px 2px ${(props) => props.theme.colors["black-100"]};
+    border-radius: 6px;
+    color: ${(props) => props.theme.colors["gray-200"]};
+    font-size: ${(props) => props.theme.fontSize["text-sm"]};
+    font-weight: ${(props) => props.theme.fontWeight.regular};
+    line-height: ${(props) => props.theme.lineHeight["leading-normal"]};
+    margin-block-start: 0.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    resize: none;
+    width: 100%;
+  }
 `;
 
 export const SecondaryLabel = styled.label`
