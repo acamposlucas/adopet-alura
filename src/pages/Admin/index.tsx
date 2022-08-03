@@ -4,6 +4,7 @@ import {
   SecondaryLabel,
 } from "../../styles/components/SecondaryForm";
 import { AdminFormContainer, AdminContainer } from "./styles";
+import { useForm } from "react-hook-form";
 
 export const Admin = () => {
   return (
@@ -11,16 +12,18 @@ export const Admin = () => {
       <AdminFormContainer>
         <SecondaryLabel htmlFor="petName">
           Nome
-          <SecondaryInput type="text" id="petName" required />
+          <SecondaryInput type="text" name="petName" id="petName" required />
         </SecondaryLabel>
         <SecondaryLabel htmlFor="petAge">
           Idade
-          <SecondaryInput type="text" id="petAge" required />
+          <SecondaryInput type="text" name="petAge" id="petAge" required />
         </SecondaryLabel>
         <SecondaryLabel htmlFor="petSize">
           Tamanho
           <select id="petSize" name="petSize" required>
-            <option value="Porte pequeno">Porte pequeno</option>
+            <option defaultChecked value="Porte pequeno">
+              Porte pequeno
+            </option>
             <option value="Porte pequeno/médio">Porte pequeno/médio</option>
             <option value="Porte médio">Porte médio</option>
             <option value="Porte médio/grande">Porte médio/grande</option>
@@ -32,6 +35,7 @@ export const Admin = () => {
           Local
           <SecondaryInput
             id="petLocality"
+            name="petLocality"
             placeholder="Cidade (Estado)"
             type="text"
             required
@@ -39,17 +43,18 @@ export const Admin = () => {
         </SecondaryLabel>
         <SecondaryLabel htmlFor="petImage">
           Foto
-          <SecondaryInput type="text" id="petImage" required />
+          <SecondaryInput type="text" name="petImage" id="petImage" required />
         </SecondaryLabel>
         <SecondaryLabel htmlFor="petBehavior">
           Comportamento
           <textarea
             id="petBehavior"
+            name="petBehavior"
             placeholder="Descreva sucintamente o comportamento do animal"
             required
           />
         </SecondaryLabel>
-        <Button>Cadastrar</Button>
+        <Button type="submit">Cadastrar</Button>
       </AdminFormContainer>
     </AdminContainer>
   );

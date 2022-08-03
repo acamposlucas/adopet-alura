@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
 
   @media (min-width: 400px) {
     margin-inline: auto;
-    width: calc(100% - 2rem);
+    width: 100%;
     max-width: 22.5rem;
   }
 `;
